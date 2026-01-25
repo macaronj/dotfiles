@@ -1,0 +1,99 @@
+# Settings
+theme = "vague"
+
+# theme = "vague"
+[editor]
+cursorline = true
+color-modes = true
+true-color = true
+scrolloff = 10
+end-of-line-diagnostics = "hint"
+popup-border = "all"
+continue-comments = false
+preview-completion-insert = false
+completion-replace = true
+auto-completion = true
+line-number = "relative"
+
+[editor.auto-save]
+focus-lost = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+display-inlay-hints = false
+auto-signature-help = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner","diagnostics"]
+center = ["file-modification-indicator", "file-name"]
+right =  [ "selections","position", "total-line-numbers"]
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "V"
+diagnostics = ["error", "warning", "info", "hint"]
+
+[editor.indent-guides]
+render = true
+
+# Keybinding
+[keys.normal]
+C-s = ":w"
+C-f = ":fmt"
+C-q = ":q"
+C-e = [
+  ":sh rm -f /tmp/unique-file",
+  ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file",
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ":open %sh{cat /tmp/unique-file}",
+  ":redraw",
+]
+C-g = [
+  ":write-all",
+  ":new",
+  ":insert-output lazygit",
+  ":buffer-close!",
+  ":redraw",
+  ":reload-all"
+]
+C-j = "save_selection"
+A-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before"
+]
+A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before"
+]
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+x = "select_line_below"
+X = "select_line_above"
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+
+[keys.normal.space]
+l = ":toggle lsp.display-inlay-hints"
+
+[keys.insert]
+j = { j = "normal_mode" }
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"

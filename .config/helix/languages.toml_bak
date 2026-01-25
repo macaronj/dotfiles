@@ -1,0 +1,55 @@
+# [language-server.gopls]
+# command = "gopls"
+# args = ["-logfile=/tmp/gopls.log",  "serve"]
+# [language-server.gopls.config]
+# "ui.diagnostic.staticcheck" = true
+
+
+# [[language]]
+# name = "php"
+# scope = "source.php"
+# injection-regex = "php"
+# file-types = ["php", "inc", "php4", "php5", "phtml", "ctp"]
+# shebangs = ["php"]
+# roots = ["composer.json", "index.php"]
+# comment-token = "//"
+# language-servers = ["devsense"]
+# indent = { tab-width = 4, unit = "    " }
+
+# [[language]]
+# name = "markdown"
+# formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+# [[language]]
+# name = "css"
+# language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
+
+# [[language]]
+# name = "blade"
+# language-servers = [
+#   "devsense",
+#   "vscode-html-language-server",
+#   "vscode-css-language-server",
+#   "tailwindcss-ls"
+# ]
+# roots = ["composer.json", "index.php"]
+# formatter = { command = "blade-formatter", args = [
+#   "--write",
+#   "--stdin",
+#   "--wrap-line-length",
+#   "9999",
+#   "--wrap-attributes",
+#   "preserve-aligned"
+# ] }
+# auto-format = true
+
+
+# [[lannguage]]
+# name = "html"
+# language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
+# [language-server.gopls]
+# command = "gopls"
+# args = ["-logfile=/tmp/gopls.log", "serve"]
+
+# [language-server.gopls.config]
+# "ui.diagnostic.staticcheck" = true

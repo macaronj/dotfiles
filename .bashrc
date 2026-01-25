@@ -39,6 +39,12 @@ alias tree='eza --tree -L 2'
 # Git status integration
 alias lg='eza -l --git'
 
+# cd 
+alias ..='cd ..'
+
+# Neovim
+alias v='nvim'
+
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
