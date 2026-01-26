@@ -48,4 +48,8 @@ alias v='nvim'
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+# Cargo
 . "$HOME/.cargo/env"
