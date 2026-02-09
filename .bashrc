@@ -24,6 +24,9 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+# helix
+alias hx='helix'
+
 # Replace ls with eza
 alias ls='eza --icons --group-directories-first --header --time-style=long-iso'
 
@@ -46,17 +49,19 @@ alias ~='cd ~'
 # Neovim
 alias v='nvim'
 
+eval "$(starship init bash)"
+
 # Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
 # Cargo
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # Mise
- eval "$(mise activate bash)"
+ # eval "$(mise activate bash)"
 
 # sk
 alias sk='sk --color=16'
