@@ -49,8 +49,10 @@ alias ..='cd ..'
 alias ~='cd ~'
 
 # Neovim
-alias v='nvim'
-
+# alias v='nvim'
+alias v='bob run nightly'
+ 
+# starship
 eval "$(starship init bash)"
 
 # Homebrew

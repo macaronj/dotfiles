@@ -8,3 +8,4 @@ fi
 # User specific environment and startup programs
 
 . "$HOME/.cargo/env"
+. "/home/macaronj/.local/share/bob/env/env.sh"
