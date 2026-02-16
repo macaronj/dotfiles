@@ -1,0 +1,16 @@
+{
+  "blink.cmp": { "branch": "main", "commit": "4b18c32adef2898f95cdef6192cbd5796c1a332d" },
+  "conform.nvim": { "branch": "master", "commit": "c2526f1cde528a66e086ab1668e996d162c75f4f" },
+  "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
+  "fzf-lua": { "branch": "main", "commit": "5921997472574fca3880b62949eb8679dc6f5afc" },
+  "gitsigns.nvim": { "branch": "main", "commit": "9f3c6dd7868bcc116e9c1c1929ce063b978fa519" },
+  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
+  "nvim-autopairs": { "branch": "master", "commit": "59bce2eef357189c3305e25bc6dd2d138c1683f5" },
+  "nvim-colorizer.lua": { "branch": "master", "commit": "338409dd8a6ed74767bad3eb5269f1b903ffb3cf" },
+  "nvim-treesitter": { "branch": "main", "commit": "4d9466677a5ceadef104eaa0fe08d60d91c4e9a7" },
+  "nvim-web-devicons": { "branch": "master", "commit": "746ffbb17975ebd6c40142362eee1b0249969c5c" },
+  "oil.nvim": { "branch": "master", "commit": "f55b25e493a7df76371cfadd0ded5004cb9cd48a" },
+  "orgmode": { "branch": "master", "commit": "26aa4fa26c570da6eb6798fb1b8df364204c3d99" },
+  "vague": { "branch": "main", "commit": "c1ab4d4891ff3a27deba6a80222d895ac8ffb2e5" }
+}
