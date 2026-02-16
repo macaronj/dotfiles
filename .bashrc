@@ -12,6 +12,8 @@ fi
 export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
+export PATH="$PATH:$HOME/.cargo/bin"   
+export PATH="$PATH:$HOME/go/bin"   
 # export SYSTEMD_PAGER=
 export EDITOR=nvim
 export VISUAL=nvim
@@ -27,7 +29,7 @@ fi
 unset rc
 
 # helix
-alias hx='helix'
+# alias hx='helix'
 
 # Replace ls with eza
 alias ls='eza --icons --group-directories-first --header --time-style=long-iso'
@@ -49,8 +51,8 @@ alias ..='cd ..'
 alias ~='cd ~'
 
 # Neovim
-# alias v='nvim'
-alias v='bob run nightly'
+alias v='nvim'
+# alias v='bob run nightly'
  
 # starship
 eval "$(starship init bash)"
@@ -101,3 +103,5 @@ SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --fil
     }
 
 
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
