@@ -7,12 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Colored Zed Icons Theme Dark",
+  "disable_ai": false,
+  "buffer_font_family": "AdwaitaMono Nerd Font",
+  "helix_mode": true,
+  "which_key": {
+    "enabled": true,
+  },
+  "vim_mode": true,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark",
+  },
   "ui_font_size": 16,
   "buffer_font_size": 15,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Vague",
-  },
+  "theme": "Vague",
+  "selection_highlight": false,
 }
