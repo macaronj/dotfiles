@@ -74,7 +74,7 @@ alias sk='sk --color=16'
 alias p='cd ` fd . -t d --max-depth 1 "/home/macaronj/Documents/Projects" | sk`'
 alias c='cd ` fd . -L -t d --max-depth 1 "/home/macaronj/.config" | sk`'
 alias b='papers ` fd . -t f "/home/macaronj/Documents/Books" | sk`'
-source <(sk --shell bash --shell-bindings)
+source <(sk --shell bash )
 SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 
 
