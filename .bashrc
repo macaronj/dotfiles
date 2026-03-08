@@ -12,11 +12,13 @@ fi
 export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
-export PATH="$PATH:$HOME/.cargo/bin"   
-export PATH="$PATH:$HOME/go/bin"   
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/go/bin"
 # export SYSTEMD_PAGER=
 export EDITOR=nvim
 export VISUAL=nvim
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
@@ -46,14 +48,14 @@ alias tree='eza --tree -L 2'
 # Git status integration
 alias lg='eza -l --git'
 
-# cd 
+# cd
 alias ..='cd ..'
 alias ~='cd ~'
 
 # Neovim
 alias v='nvim'
 # alias v='bob run nightly'
- 
+
 # starship
 eval "$(starship init bash)"
 
@@ -67,41 +69,46 @@ eval "$(fzf --bash)"
 # . "$HOME/.cargo/env"
 
 # Mise
- # eval "$(mise activate bash)"
+eval "$(mise activate bash)"
 
 # sk
+source <(sk --shell bash)
+SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
+
 alias sk='sk --color=16'
 alias p='cd ` fd . -t d --max-depth 1 "/home/macaronj/Documents/Projects" | sk`'
 alias c='cd ` fd . -L -t d --max-depth 1 "/home/macaronj/.config" | sk`'
-alias b='papers ` fd . -t f "/home/macaronj/Documents/Books" | sk`'
-source <(sk --shell bash )
-SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 
+function b() {
+    file=$(fd . -t f "/home/macaronj/Documents/Books" | sk)
 
+    # Check if a file was selected
+    if [[ -n "$file" && -f "$file" ]]; then
+        # Open the file with the default application (e.g., xdg-open on Linux)
+        xdg-open "$file" &
+        disown
+    fi
+}
 
-    function extract () {
-      if [ -f $1 ] ; then
+function extract() {
+    if [ -f $1 ]; then
         case $1 in
-          *.tar.bz2)   tar xjvf $1    ;;
-          *.tar.gz)    tar xzvf $1    ;;
-          *.tar.xz)    tar xvf $1    ;;
-          *.bz2)       bzip2 -d $1    ;;
-          *.rar)       unrar2dir $1    ;;
-          *.gz)        gunzip $1    ;;
-          *.tar)       tar xf $1    ;;
-          *.tbz2)      tar xjf $1    ;;
-          *.tgz)       tar xzf $1    ;;
-          *.zip)       unzip2dir $1     ;;
-          *.Z)         uncompress $1    ;;
-          *.7z)        7z x $1    ;;
-          *.ace)       unace x $1    ;;
-          *)           echo "'$1' cannot be extracted via extract()"   ;;
+        *.tar.bz2) tar xjvf $1 ;;
+        *.tar.gz) tar xzvf $1 ;;
+        *.tar.xz) tar xvf $1 ;;
+        *.bz2) bzip2 -d $1 ;;
+        *.rar) unrar2dir $1 ;;
+        *.gz) gunzip $1 ;;
+        *.tar) tar xf $1 ;;
+        *.tbz2) tar xjf $1 ;;
+        *.tgz) tar xzf $1 ;;
+        *.zip) unzip2dir $1 ;;
+        *.Z) uncompress $1 ;;
+        *.7z) 7z x $1 ;;
+        *.ace) unace x $1 ;;
+        *) echo "'$1' cannot be extracted via extract()" ;;
         esac
-      else
+    else
         echo "'$1' is not a valid file"
-      fi
-    }
-
-
-export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin
+    fi
+}
