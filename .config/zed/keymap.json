@@ -33,4 +33,10 @@
 
     },
   },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-space": "terminal_panel::Toggle"
+    }
+  }
 ]

@@ -79,21 +79,21 @@ A-k = [
 A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 x = "select_line_below"
 X = "select_line_above"
-up = "no_op"
-down = "no_op"
-left = "no_op"
-right = "no_op"
+# up = "no_op"
+# down = "no_op"
+# left = "no_op"
+# right = "no_op"
 
 [keys.normal.space]
 l = ":toggle lsp.display-inlay-hints"
 
 [keys.insert]
 j = { j = "normal_mode" }
-up = "no_op"
-down = "no_op"
-left = "no_op"
-right = "no_op"
-pageup = "no_op"
-pagedown = "no_op"
-home = "no_op"
-end = "no_op"
+# up = "no_op"
+# down = "no_op"
+# left = "no_op"
+# right = "no_op"
+# pageup = "no_op"
+# pagedown = "no_op"
+# home = "no_op"
+# end = "no_op"

@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": false,
   "show_edit_predictions": false,
   "agent": {
     "default_model": {
@@ -18,14 +19,14 @@
     "model_parameters": [],
   },
   "terminal": {
-    "font_family": "JetBrainsMono Nerd Font Mono",
-    "font_size": 14.0,
+    "dock": "right",
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_size": 15.0,
   },
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  // "buffer_font_size": 13.0,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 15.0,
   "format_on_save": "off",
   "autosave": "on_focus_change",
-  "disable_ai": false,
   "vim_mode": true,
   "helix_mode": false,
   "which_key": {
@@ -62,4 +63,5 @@
     // "show_branch_name": false,
     "show_user_menu": false,
   },
+  "lsp_document_colors": "background"
 }
