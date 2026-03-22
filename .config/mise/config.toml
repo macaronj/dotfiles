@@ -1,0 +1,7 @@
+[tools]
+chezmoi = "latest"
+go = "latest"
+node = "latest"
+'github:JohnnyMorganz/stylua' = '2.4.0'
+lua-language-server = "latest"
+neovim = "nightly"

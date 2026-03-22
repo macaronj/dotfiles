@@ -1,0 +1,5 @@
+[tools]
+chezmoi = "latest"
+go = "latest"
+node = "latest"
+'ubi:JohnnyMorganz/stylua' = '2.4.0'

@@ -24,7 +24,7 @@
     "font_size": 15.0,
   },
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 15.0,
+  "buffer_font_size": 14.0,
   "format_on_save": "off",
   "autosave": "on_focus_change",
   "vim_mode": true,
@@ -37,7 +37,7 @@
     "light": "Colored Zed Icons Theme Dark",
     "dark": "Colored Zed Icons Theme Dark",
   },
-  "theme": "Vague",
+  "theme": "Carbonfox",
   "selection_highlight": false,
   "auto_install_extensions": {
     "vague": true,
@@ -63,5 +63,5 @@
     // "show_branch_name": false,
     "show_user_menu": false,
   },
-  "lsp_document_colors": "background"
+  "lsp_document_colors": "background",
 }
