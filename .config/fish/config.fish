@@ -13,7 +13,10 @@ if status is-interactive
     # For ripgrep (with symlink support)
     set -x FZF_DEFAULT_COMMAND 'rg --files --follow --hidden --no-ignore'
     # Replace ls with eza
+
+    set -x HELIX_RUNTIME ~/Documents/Projects/helix/runtime
     alias ls='eza --icons --group-directories-first --header --time-style=long-iso'
+
     # Long format with icons and headers
     alias ll='eza -l --header --icons'
     # Include hidden files
@@ -23,7 +26,8 @@ if status is-interactive
     # Tree view (2 levels)
     alias tree='eza --tree -L 2'
     # Neovim
-    alias v='nvim'
+    alias v='bob run nightly'
+    alias vs='bob run nightly'
     # Open Book with Papers
     function b
         set file (fd . --type f ~/Documents/Books | fzf)
@@ -42,4 +46,7 @@ if status is-interactive
         set -l whither (fd . ~/Documents/Projects -t d -d 1| fzf)
         test -n "$whither" && cd "$whither"
     end
+
+else
+    mise activate fish --shims | source
 end

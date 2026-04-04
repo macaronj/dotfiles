@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "base_keymap": "VSCode",
   "disable_ai": false,
   "show_edit_predictions": false,
   "agent": {
@@ -25,10 +26,9 @@
   },
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 14.0,
-  "format_on_save": "off",
+  "format_on_save": "on",
   "autosave": "on_focus_change",
   "vim_mode": true,
-  "helix_mode": false,
   "which_key": {
     "enabled": true,
   },
@@ -37,7 +37,7 @@
     "light": "Colored Zed Icons Theme Dark",
     "dark": "Colored Zed Icons Theme Dark",
   },
-  "theme": "Carbonfox",
+  "theme": "Vague",
   "selection_highlight": false,
   "auto_install_extensions": {
     "vague": true,
@@ -63,5 +63,5 @@
     // "show_branch_name": false,
     "show_user_menu": false,
   },
-  "lsp_document_colors": "background",
+  "lsp_document_colors": "inlay",
 }

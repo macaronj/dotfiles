@@ -1,19 +1,21 @@
 # Settings
 theme = "vague"
 
-# theme = "vague"
 [editor]
 cursorline = true
 color-modes = true
 true-color = true
 scrolloff = 10
-end-of-line-diagnostics = "hint"
 popup-border = "all"
 continue-comments = false
 preview-completion-insert = false
 completion-replace = true
 auto-completion = true
 line-number = "relative"
+
+[editor.inline-diagnostics]
+# cursor-line = "disable"
+other-lines = "disable"
 
 [editor.auto-save]
 focus-lost = true
@@ -79,6 +81,8 @@ A-k = [
 A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 x = "select_line_below"
 X = "select_line_above"
+
+# Disable arrow keys
 # up = "no_op"
 # down = "no_op"
 # left = "no_op"
@@ -88,7 +92,9 @@ X = "select_line_above"
 l = ":toggle lsp.display-inlay-hints"
 
 [keys.insert]
-j = { j = "normal_mode" }
+j = { k = "normal_mode" }
+
+# Disable arrow keys
 # up = "no_op"
 # down = "no_op"
 # left = "no_op"

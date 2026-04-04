@@ -2,6 +2,23 @@
 chezmoi = "latest"
 go = "latest"
 node = "latest"
-'github:JohnnyMorganz/stylua' = '2.4.0'
+"github:JohnnyMorganz/stylua" = "latest"
 lua-language-server = "latest"
-neovim = "nightly"
+"mason:vscode-css-language-server" = "latest"
+"mason:tailwindcss-language-server" = "latest"
+"npm:prettier" = "latest"
+"mason:typescript-language-server" = "latest"
+yamlfmt = "latest"
+gofumpt = "latest"
+"npm:intelephense" = "latest"
+tree-sitter = "latest"
+bob = "latest"
+rust = "latest"
+"go:github.com/go-delve/delve/cmd/dlv" = "latest"
+opencode = "latest"
+golangci-lint-langserver = "latest"
+gitui = "latest"
+golangci-lint = "latest"
+
+[settings]
+experimental = true

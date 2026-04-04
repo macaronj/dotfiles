@@ -1,4 +1,0 @@
-[[language]]
-name = "markdown"
-formatter = { command = "prettier", args = ["--parser", "markdown", "--prose-wrap", "never"] }
-auto-format = true   

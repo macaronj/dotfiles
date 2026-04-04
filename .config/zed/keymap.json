@@ -9,11 +9,7 @@
   {
     "context": "Workspace",
     "bindings": {
-       "shift shift": [
-         "task::Spawn",
-         { "task_name": "Television File Finder", "reveal_target": "center" },
-       ],
-
+      "Alt-space": "terminal_panel::Toggle",
     },
   },
   {
@@ -23,20 +19,20 @@
     },
   },
   {
-    "context": "Editor",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
-      "ctrl-f": "editor::Format",
-      "ctrl-g": [
+      "space x": [
+        "task::Spawn",
+        { "task_name": "fzf", "reveal_target": "center" },
+      ],
+      "space f": [
+        "task::Spawn",
+        { "task_name": "Television File Finder", "reveal_target": "center" },
+      ],
+      "space g": [
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" },
       ],
-
     },
   },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "alt-space": "terminal_panel::Toggle"
-    }
-  }
 ]
