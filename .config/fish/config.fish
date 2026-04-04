@@ -43,10 +43,15 @@ if status is-interactive
     end
     # Change into projects folder
     function p
-        set -l whither (fd . ~/Documents/Projects -t d -d 1| fzf)
+        set -l whither (fd . ~/Documents/Projects -t f -d 1| fzf)
         test -n "$whither" && cd "$whither"
     end
+    # Choose edit file from notes folder 
 
+    function nc
+        set -l whither (fd . ~/Documents/Nextcloud/Notes/Base -t f -d 1| fzf)
+        test -n "$whither" && hx "$whither"
+    end
 else
     mise activate fish --shims | source
 end

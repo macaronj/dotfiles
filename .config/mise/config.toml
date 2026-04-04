@@ -19,6 +19,7 @@ opencode = "latest"
 golangci-lint-langserver = "latest"
 gitui = "latest"
 golangci-lint = "latest"
+marksman = "latest"
 
 [settings]
 experimental = true
