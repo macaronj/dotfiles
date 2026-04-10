@@ -14,12 +14,13 @@ gofumpt = "latest"
 tree-sitter = "latest"
 bob = "latest"
 rust = "latest"
-"go:github.com/go-delve/delve/cmd/dlv" = "latest"
 opencode = "latest"
 golangci-lint-langserver = "latest"
 gitui = "latest"
 golangci-lint = "latest"
 marksman = "latest"
+"npm:fish-lsp" = "latest"
+"go:github.com/go-delve/delve/cmd/dlv" = "latest"
 
 [settings]
 experimental = true

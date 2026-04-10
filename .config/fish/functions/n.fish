@@ -11,13 +11,12 @@ function n
 
     # Create file with header if it doesn't exist
     if not test -e "$directory/$filename"
-        echo "# $date" >>"$directory/$filename"
         echo "" >>"$directory/$filename"
     end
 
     # Append the note with timestamp
     if test (count $argv) -gt 0
-        echo "- $timestamp: $argv" >>"$directory/$filename"
+        echo "- $date $timestamp: $argv" >>"$directory/$filename"
     else
         echo "Please provide a note to record."
         return 1
