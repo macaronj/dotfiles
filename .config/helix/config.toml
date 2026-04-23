@@ -2,35 +2,16 @@
 theme = "vague"
 
 [editor]
+scrolloff = 10
+line-number = "relative"
 cursorline = true
 color-modes = true
 true-color = true
-scrolloff = 10
 popup-border = "all"
 continue-comments = false
 preview-completion-insert = false
 completion-replace = true
 auto-completion = true
-line-number = "relative"
-
-[editor.inline-diagnostics]
-# cursor-line = "disable"
-other-lines = "disable"
-
-[editor.auto-save]
-focus-lost = true
-
-[editor.file-picker]
-hidden = false
-
-[editor.lsp]
-display-inlay-hints = false
-auto-signature-help = true
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
 
 [editor.statusline]
 left = ["mode", "spinner","diagnostics"]
@@ -40,6 +21,28 @@ mode.normal = "N"
 mode.insert = "I"
 mode.select = "V"
 diagnostics = ["error", "warning", "info", "hint"]
+
+[editor.lsp]
+display-inlay-hints = false
+auto-signature-help = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.inline-diagnostics]
+cursor-line = "disable"
+other-lines = "disable"
+
+[editor.auto-save]
+focus-lost = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace]
+render = "none"
 
 [editor.indent-guides]
 render = true
@@ -90,6 +93,7 @@ X = "select_line_above"
 
 [keys.normal.space]
 l = ":toggle lsp.display-inlay-hints"
+ x = ":toggle whitespace.render all none"
 
 [keys.insert]
 j = { k = "normal_mode" }

@@ -7,61 +7,155 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  // Keymaps
   "base_keymap": "VSCode",
-  "disable_ai": false,
-  "show_edit_predictions": false,
+  // UI
+  "ui_font_size": 17.0,
+  "project_panel": {
+    "dock": "right",
+    "button": true,
+  },
+  "outline_panel": {
+    "dock": "left",
+    "button": false,
+  },
+
+  "status_bar": {
+    // "experimental.show": false,
+    "show_active_file": true,
+    "active_encoding_button": "enabled",
+    "cursor_position_button": true,
+    "line_endings_button": true,
+    "active_language_button": true,
+  },
+  "title_bar": {
+    "button_layout": "standard",
+    "show_onboarding_banner": true,
+    "show_project_items": false,
+    "show_branch_name": false,
+    "show_user_menu": false,
+    "show_menus": false,
+    "show_sign_in": false,
+    "show_branch_status_icon": false,
+    "show_user_picture": false,
+  },
+  "global_lsp_settings": {
+    "button": true,
+  },
+  "collaboration_panel": {
+    "dock": "left",
+    "button": false,
+  },
+  "search": {
+    "button": false,
+  },
+  "git_panel": {
+    "dock": "right",
+    "button": true,
+  },
+  "diagnostics": {
+    "button": true,
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "debugger": {
+    "button": false,
+    "dock": "right",
+    "format_dap_log_messages": true,
+    "save_breakpoints": true,
+    "log_dap_communications": true,
+    // "stepping_granularity": "instruction",
+    // "timeout": 0,
+  },
+
+  "toolbar": {
+    "breadcrumbs": false,
+    "selections_menu": false,
+    "agent_review": false,
+    "code_actions": false,
+    "quick_actions": false,
+  },
+  "tab_bar": {
+    "show": true,
+    "show_pinned_tabs_in_separate_row": false,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false,
+  },
+  "tabs": {
+    "show_diagnostics": "all",
+    "git_status": true,
+    "file_icons": true,
+    "activate_on_close": "history",
+    "close_position": "right",
+    "show_close_button": "hidden",
+  },
+  "scrollbar": {
+    "show": "auto",
+  },
+  // Buffer
+  "relative_line_numbers": "enabled",
+  "buffer_font_weight": 400.0,
+  "buffer_font_size": 15.0,
+  "buffer_line_height": "standard",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "helix_mode": true,
+  "vim_mode": true,
+  "format_on_save": "on",
+  "autosave": "on_focus_change",
+  "which_key": {
+    "enabled": true,
+  },
+  "buffer_font_features": {
+    // "calt": false,
+    // "liga": false,
+    // "dlig": false,
+  },
+
+  // LSP
+  // "semantic_tokens": "combined",
+  "lsp_document_colors": "inlay",
+  // AI
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "mode": "subtle",
+    "provider": "zed",
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "registry",
+    },
+  },
   "agent": {
+    "dock": "left",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+      "provider": "opencode",
+      "model": "big-pickle",
       "enable_thinking": false,
     },
     "favorite_models": [],
     "model_parameters": [],
   },
+  // Terminal
   "terminal": {
-    "dock": "right",
+    "blinking": "off",
+    "shell": "system",
+    "button": false,
+    "dock": "bottom",
     "font_family": "JetBrainsMono Nerd Font",
     "font_size": 15.0,
   },
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 14.0,
-  "format_on_save": "on",
-  "autosave": "on_focus_change",
-  "vim_mode": true,
-  "which_key": {
-    "enabled": true,
-  },
+  //Theme
+  "theme": "Vague",
   "icon_theme": {
     "mode": "dark",
     "light": "Colored Zed Icons Theme Dark",
     "dark": "Colored Zed Icons Theme Dark",
   },
-  "theme": "Vague",
   "selection_highlight": false,
-  "auto_install_extensions": {
-    "vague": true,
-  },
-  "tab_bar": {
-    "show": false,
-  },
-  "toolbar": {
-    "quick_actions": false,
-  },
   "file_finder": {
     "modal_max_width": "large",
   },
-  "project_panel": {
-    "dock": "right",
-  },
-  "outline_panel": {
-    "dock": "right",
-  },
-  "title_bar": {
-    // "show_onboarding_banner": false,
-    // "show_project_items": false,
-    // "show_branch_name": false,
-    "show_user_menu": false,
-  },
-  "lsp_document_colors": "inlay",
+  //Languages
+  // "languages": {},
 }

@@ -13,18 +13,14 @@
     },
   },
   {
-    "context": "Editor && vim_mode == insert",
+    "context": "Editor && vim_mode == helix_insert",
     "bindings": {
       "j k": "vim::NormalBefore",
     },
   },
   {
-    "context": "Editor && vim_mode == normal",
+    "context": "Editor && vim_mode == helix_normal",
     "bindings": {
-      "space x": [
-        "task::Spawn",
-        { "task_name": "fzf", "reveal_target": "center" },
-      ],
       "space f": [
         "task::Spawn",
         { "task_name": "Television File Finder", "reveal_target": "center" },
@@ -33,6 +29,8 @@
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" },
       ],
+      "space e": "workspace::ToggleLeftDock",
+      "space w": "workspace::Save",
     },
   },
 ]

@@ -1,6 +1,6 @@
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.signcolumn = "yes:1"
+vim.o.signcolumn = "yes"
 vim.o.confirm = true
 vim.o.termguicolors = true
 vim.g.mapleader = " "
@@ -29,7 +29,7 @@ vim.pack.add({
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	{ src = "https://github.com/brenoprata10/nvim-highlight-colors" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", branch = "main", build = ":TSUpdate" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects" },
 	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
 	{ src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim", make = "build" },
@@ -55,7 +55,10 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 
 require("blink.cmp").setup({
 	completion = { documentation = { auto_show = true } },
-	-- fuzzy = { implementation = "lua" },
+	fuzzy = {
+		implementation = "prefer_rust",
+		prebuilt_binaries = { download = true },
+	},
 })
 require("conform").setup({
 	format_on_save = {
@@ -64,9 +67,9 @@ require("conform").setup({
 	},
 	formatters_by_ft = {
 		lua = { "stylua" },
-		go = { "gofmt" },
-		rust = { "rustfmt", lsp_format = "fallback" },
-		javascript = { "prettier", stop_after_first = true },
+		go = { "gofumpt" },
+		rust = { "rustfmt" },
+		javascript = { "prettier" },
 	},
 })
 require("nvim-treesitter").setup({

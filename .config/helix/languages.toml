@@ -1,4 +1,25 @@
+## LSPs
+
+[language-server]
+codebook = { command = "codebook-lsp", args = ["serve"] }
+uwu_colors = { command = "uwu_colors" }   
+
+[language-server.gopls.config]
+gofumpt = true
+
+## Languages
+
 [[language]]
 name = "markdown"
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
+language-servers = ["codebook", "marksman"]
+auto-format = true
 
+
+[[language]]
+name = "go"
+language-servers = ["codebook", "gopls"]
+
+[[language]]
+name = "json"
+language-servers = [ "uwu_colors" ]
