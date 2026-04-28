@@ -4,5 +4,14 @@
   },
   "qcalCalendar": {
     "enabled": true
+  },
+  "tasks": {
+    "enabled": true,
+    "caldavURL": "https://231120xc5z6k6j6ki6s.nextcloud.hosting.zone/remote.php/dav",
+    "caldavUsername": "macaronj",
+    "caldavPassword": "°ÙïüÁdCqméÔþéf$'£¤6LK§{T¥3ã5ÚäIï",
+    "caldavCalendar": "personal-1",
+    "caldavCalendars": "",
+    "caldavSSLVerify": true
   }
 }

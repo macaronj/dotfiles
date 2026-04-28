@@ -3,10 +3,10 @@ function n
     set date (date '+%Y-%m-%d')
     set timestamp (date '+%H:%M:%S')
     set filename "notizen.md"
-    set directory "$HOME/Documents/Nextcloud/Notes/Base"
+    set directory "$HOME/Documents/Nextcloud/Notes"
     # Create directory if it doesn't exist
-    if not test -d "$HOME/Documents/Nextcloud/Notes/Base"
-        mkdir -p "$HOME/Documents/Nextcloud/Notes/Base"
+    if not test -d "$HOME/Documents/Nextcloud/Notes"
+        mkdir -p "$HOME/Documents/Nextcloud/Notes"
     end
 
     # Create file with header if it doesn't exist

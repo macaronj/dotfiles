@@ -49,7 +49,7 @@ if status is-interactive
     # Choose edit file from notes folder 
 
     function nc
-        set -l whither (fd . ~/Documents/Nextcloud/Notes/Base -t f -d 1| fzf)
+        set -l whither (fd . ~/Documents/Nextcloud/Notes -t f -d 1| fzf)
         test -n "$whither" && hx "$whither"
     end
 else

@@ -8,6 +8,14 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Keymaps
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+    "blame": {
+      "show_avatar": false,
+    },
+  },
   "base_keymap": "VSCode",
   // UI
   "ui_font_size": 17.0,
@@ -60,7 +68,7 @@
     },
   },
   "debugger": {
-    "button": false,
+    "button": true,
     "dock": "right",
     "format_dap_log_messages": true,
     "save_breakpoints": true,
@@ -114,7 +122,9 @@
 
   // LSP
   // "semantic_tokens": "combined",
-  "lsp_document_colors": "inlay",
+  // "lsp_document_colors": "inlay",
+  "lsp_document_colors": "background",
+
   // AI
   "show_edit_predictions": true,
   "edit_predictions": {

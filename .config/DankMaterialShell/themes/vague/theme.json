@@ -3,40 +3,23 @@
   "name": "Vague",
   "version": "1.0.0",
   "author": "macaronj",
-  "description": "Colorscheme inspired by neovim theme",
+  "description": "A cool, dark, low contrast colorscheme for Neovim. Pastel yet vivid, like a fleeting memory...",
   "dark": {
     "primaryText": "#141415",
-    "primaryContainer": "#525252",
+    "primaryContainer": "#1c1c24",
     "surface": "#141415",
     "surfaceText": "#cdcdcd",
-    "surfaceVariant": "#393939",
+    "surfaceVariant": "#1c1c24",
     "surfaceVariantText": "#f2f4f8",
     "surfaceTint": "#cdcdcd",
-    "background": "#121212",
+    "background": "#141415",
     "backgroundText": "#cdcdcd",
-    "outline": "#525252",
+    "outline": "#878787",
     "surfaceContainer": "#141415",
-    "surfaceContainerHigh": "#262626",
+    "surfaceContainerHigh": "#1c1c24",
     "error": "#d8647e",
     "warning": "#f3be7c",
-    "info": "#aeaed1"
-  },
-  "light": {
-    "primaryText": "#f6f6f6",
-    "primaryContainer": "#525252",
-    "surface": "#f6f6f6",
-    "surfaceText": "#37474f",
-    "surfaceVariant": "#d0d0d0",
-    "surfaceVariantText": "#525252",
-    "surfaceTint": "#37474f",
-    "background": "#ffffff",
-    "backgroundText": "#37474f",
-    "outline": "#90a4ae",
-    "surfaceContainer": "#f6f6f6",
-    "surfaceContainerHigh": "#f2f2f2",
-    "error": "#ee5296",
-    "warning": "#f0d92b",
-    "info": "#be85ff"
+    "info": "#7e98e8"
   },
   "variants": {
     "default": "blue",
@@ -46,26 +29,10 @@
         "name": "Blue",
         "dark": {
           "primary": "#7e98e8",
-          "secondary": "#ff7eb6"
-        },
-        "light": {
-          "primary": "#08bdba",
-          "secondary": "#ff7eb6"
-        }
-      },
-      {
-        "id": "pink",
-        "name": "Pink",
-        "dark": {
-          "primary": "#ff7eb6",
-          "secondary": "#08bdba"
-        },
-        "light": {
-          "primary": "#ff7eb6",
-          "secondary": "#08bdba"
+          "secondary": "#bb9dbd"
         }
       }
     ]
   },
-  "sourceDir": "oxocarbon"
+  "sourceDir": "vague"
 }
