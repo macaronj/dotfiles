@@ -20,7 +20,8 @@ gitui = "latest"
 golangci-lint = "latest"
 marksman = "latest"
 "npm:fish-lsp" = "latest"
-"go:github.com/go-delve/delve/cmd/dlv" = "1.26.1"
+"go:github.com/go-delve/delve/cmd/dlv" = "latest"
+lua = "latest"
 
 [settings]
 experimental = true

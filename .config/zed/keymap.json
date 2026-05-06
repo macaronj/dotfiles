@@ -29,8 +29,9 @@
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" },
       ],
-      "space e": "workspace::ToggleLeftDock",
+      "space e": "workspace::ToggleRightDock",
       "space w": "workspace::Save",
+      "space q": "pane::CloseActiveItem",
     },
   },
 ]
